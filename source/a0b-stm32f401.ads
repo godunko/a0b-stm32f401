@@ -72,4 +72,22 @@ is
    FPU                  : constant Interrupt_Number := 81;
    SPI4                 : constant Interrupt_Number := 84;
 
+   type Function_Line is
+     (SPI1_MISO,
+      SPI1_MOSI,
+      SPI1_NSS,
+      SPI1_SCK,
+      SPI2_MISO,
+      SPI2_MOSI,
+      SPI2_NSS,
+      SPI2_SCK,
+      SPI3_MISO,
+      SPI3_MOSI,
+      SPI3_NSS,
+      SPI3_SCK,
+      SPI4_MISO,
+      SPI4_MOSI,
+      SPI4_NSS,
+      SPI4_SCK);
+
 end A0B.STM32F401;
