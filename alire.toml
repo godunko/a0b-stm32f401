@@ -19,7 +19,3 @@ generate_gpr = true
 gnat_arm_elf="*"
 a0b_base = "*"
 a0b_armv7m="*"
-
-
-[configuration.values]
-a0b_armv7m.fpu_extension = "VFPv4"
