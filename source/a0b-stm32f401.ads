@@ -73,7 +73,31 @@ is
    SPI4                 : constant Interrupt_Number := 84;
 
    type Function_Line is
-     (SPI1_MISO,
+     (I2C1_SCL,
+      I2C1_SDA,
+      I2C1_SMBA,
+      I2C2_SCL,
+      I2C2_SDA,
+      I2C2_SMBA,
+      I2C3_SCL,
+      I2C3_SDA,
+      I2C3_SMBA,
+
+      USART1_CTS,
+      USART1_RTS,
+      USART1_TX,
+      USART1_RX,
+      USART1_CK,
+      USART2_CTS,
+      USART2_RTS,
+      USART2_TX,
+      USART2_RX,
+      USART2_CK,
+      USART6_TX,
+      USART6_RX,
+      USART6_CK,
+
+      SPI1_MISO,
       SPI1_MOSI,
       SPI1_NSS,
       SPI1_SCK,
