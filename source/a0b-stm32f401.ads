@@ -7,6 +7,7 @@
 pragma Restrictions (No_Elaboration_Code);
 
 with A0B.ARMv7M;
+private with A0B.Types;
 
 package A0B.STM32F401
   with Preelaborate
@@ -72,46 +73,27 @@ is
    FPU                  : constant Interrupt_Number := 81;
    SPI4                 : constant Interrupt_Number := 84;
 
-   type Function_Line is
-     (I2C1_SCL,
-      I2C1_SDA,
-      I2C1_SMBA,
-      I2C2_SCL,
-      I2C2_SDA,
-      I2C2_SMBA,
-      I2C3_SCL,
-      I2C3_SDA,
-      I2C3_SMBA,
+   type GPIO_Controller_Identifier is (A, B, C, D, E, H)
+     with Size => 4;
+   for GPIO_Controller_Identifier use
+     (A => 0, B => 1, C => 2, D => 3, E => 4, H => 7);
 
-      USART1_CTS,
-      USART1_RTS,
-      USART1_TX,
-      USART1_RX,
-      USART1_CK,
-      USART2_CTS,
-      USART2_RTS,
-      USART2_TX,
-      USART2_RX,
-      USART2_CK,
-      USART6_TX,
-      USART6_RX,
-      USART6_CK,
+   type GPIO_Line_Identifier is range 0 .. 15;
 
-      SPI1_MISO,
-      SPI1_MOSI,
-      SPI1_NSS,
-      SPI1_SCK,
-      SPI2_MISO,
-      SPI2_MOSI,
-      SPI2_NSS,
-      SPI2_SCK,
-      SPI3_MISO,
-      SPI3_MOSI,
-      SPI3_NSS,
-      SPI3_SCK,
-      SPI4_MISO,
-      SPI4_MOSI,
-      SPI4_NSS,
-      SPI4_SCK);
+   type Function_Line_Descriptor (<>) is limited private
+     with Preelaborable_Initialization;
+
+private
+
+   type GPIO_Alternative_Function is mod 2 ** 4;
+
+   type Function_Line_Configuration is record
+      Controller           : GPIO_Controller_Identifier;
+      Line                 : GPIO_Line_Identifier;
+      Alternative_Function : GPIO_Alternative_Function;
+   end record with Pack;
+
+   type Function_Line_Descriptor is
+     array (A0B.Types.Unsigned_8 range <>) of Function_Line_Configuration;
 
 end A0B.STM32F401;
