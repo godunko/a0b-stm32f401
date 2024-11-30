@@ -2,13 +2,13 @@ pragma Style_Checks (Off);
 
 --  This spec has been automatically generated from STM32F401.svd
 
-pragma Restrictions (No_Elaboration_Code);
 
 with System;
 
 --  STM32F401
 package A0B.STM32F401.SVD is
    pragma Preelaborate;
+   pragma No_Elaboration_Code_All;
 
    --------------------
    -- Base addresses --
