@@ -1,7 +1,7 @@
 name = "a0b_stm32f401"
 description = "A0B: STM32F401 base and SVD package"
-version = "0.2.0"
 website = "https://github.com/godunko/a0b-stm32f401"
+version = "0.3.0-dev"
 
 authors = ["Vadim Godunko"]
 maintainers = ["Vadim Godunko <vgodunko@gmail.com>"]
