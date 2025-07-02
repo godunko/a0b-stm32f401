@@ -16,6 +16,9 @@ generate_ada = false
 generate_c = false
 generate_gpr = true
 
+[environment]
+A0B_TOOLS_SVD.set = "${CRATE_ROOT}/svd/STM32F401.svd"
+
 [[depends-on]]
 a0b_armv7m="*"
 
