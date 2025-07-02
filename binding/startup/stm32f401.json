@@ -1,0 +1,17 @@
+{
+  "project": "a0b_stm32f401.gpr",
+  "unit": "A0B.STM32F401.Startup_Utilities",
+  "subprogram": "A0B.STM32F401.Startup_Utilities.Generic_Configure_System_Clocks",
+  "parameters":
+  {
+    "FLASH_LATENCY": "dt:&flash:latency",
+    "VOS_SCALE": "dt:&pwr:vos",
+    "PLL_M": "dt:&pll:div-m",
+    "PLL_N": "dt:&pll:mul-n",
+    "PLL_P": "dt:&pll:div-p",
+    "PLL_Q": "dt:&pll:div-q",
+    "AHB": "dt:&rcc:ahb-prescaler",
+    "APB1": "dt:&rcc:apb1-prescaler",
+    "APB2": "dt:&rcc:apb2-prescaler"
+  }
+}
