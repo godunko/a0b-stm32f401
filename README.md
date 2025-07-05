@@ -8,15 +8,15 @@ Provides base support for STM32F401 family, including:
 
 ## System' Clock Configuration Parameters
 
- * "dt:&flash:latency" flash controller latency
- * "dt:&pwr:vos" voltage scale mode
- * "dt:&pll:div-m" PLL's M divider
- * "dt:&pll:mul-n" PLL's N multiplier
- * "dt:&pll:div-p" PLL's P divider
- * "dt:&pll:div-q" PLL's Q divider
- * "dt:&rcc:ahb-prescaler" AHB prescaler
- * "dt:&rcc:apb1-prescaler" APB1 prescaler
- * "dt:&rcc:apb2-prescaler" APB2 prescaler
+ * `dt:&flash:latency` flash controller latency
+ * `dt:&pwr:vos` voltage scale mode
+ * `dt:&pll:div-m` PLL's M divider
+ * `dt:&pll:mul-n` PLL's N multiplier
+ * `dt:&pll:div-p` PLL's P divider
+ * `dt:&pll:div-q` PLL's Q divider
+ * `dt:&rcc:ahb-prescaler` AHB prescaler
+ * `dt:&rcc:apb1-prescaler` APB1 prescaler
+ * `dt:&rcc:apb2-prescaler` APB2 prescaler
 
 ## Typical configuration parameter values
 
